@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%; width: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="height: 100%; width: 100%;">
+<video autoplay style="height: 100%; width: 100%;"></video>
+
+<script>
+    const constraints = {
+        video: true,
+        audio: true
+    };
+
+    const video = document.querySelector('video');
+
+    navigator.mediaDevices.getUserMedia(constraints).
+    then((stream) => {video.srcObject = stream});
+</script>
+</body>
+</html>
